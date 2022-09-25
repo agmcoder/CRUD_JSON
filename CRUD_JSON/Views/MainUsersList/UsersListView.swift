@@ -8,29 +8,40 @@
 import SwiftUI
 
 struct MainUsersListView: View {
+    @ObservedObject var usersListVM : UsersListViewModel
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        UsersListView(usersListVM: usersListVM)
+                .navigationBarTitle("Users")
+                //toolbar with add user button
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+
+                            Image(systemName: "plus")
+                                .font(.title)
+                                .foregroundColor(.blue)
+                                .onTapGesture {
+                                    //add user
+                                    print("add user")
+                                }
+                    }
+                }
+
     }
 }
 // UsersListView
 // List of users showing the name and birthdate
 struct UsersListView: View {
-    @ObservedObject var usersListVM = UsersListViewModel()
+    @ObservedObject var usersListVM :UsersListViewModel
 
     var body: some View {
-        NavigationView {
-            List(self.usersListVM.users) { user in
-                NavigationLink(destination: UserDetailView(user: user)) {
+            List(usersListVM.users) { user in
                     UserCell(user: user)
-                }
-            }
-            .navigationBarTitle("Users")
         }
     }
 }
 
 struct UsersListView_Previews: PreviewProvider {
     static var previews: some View {
-        UsersListView()
+        UsersListView(usersListVM: UsersListViewModel())
     }
 }

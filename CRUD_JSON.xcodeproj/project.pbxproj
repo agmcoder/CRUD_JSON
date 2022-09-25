@@ -9,16 +9,22 @@
 /* Begin PBXBuildFile section */
 		649B24F7C30806EEFE7B8FFB /* UsersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649B2F2F401460ABE7FEC4DA /* UsersListViewModel.swift */; };
 		649B256641C41E704CA5EAF0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649B2DF167812F7DEFC53264 /* User.swift */; };
+		649B27E3814182227DD02533 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649B218C9DC8222CE4172A98 /* EndPoint.swift */; };
+		649B2EA7F468DF6B610A8D19 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649B2E9ECB3D4E7812F3A07C /* UserCell.swift */; };
 		9EE1B85C28DF9F4100CD633B /* CRUD_JSONApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE1B85B28DF9F4100CD633B /* CRUD_JSONApp.swift */; };
 		9EE1B85E28DF9F4100CD633B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE1B85D28DF9F4100CD633B /* ContentView.swift */; };
 		9EE1B86028DF9F4300CD633B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EE1B85F28DF9F4300CD633B /* Assets.xcassets */; };
 		9EE1B86328DF9F4300CD633B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EE1B86228DF9F4300CD633B /* Preview Assets.xcassets */; };
 		9EE1B86B28DFA07500CD633B /* UsersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE1B86A28DFA07500CD633B /* UsersListView.swift */; };
 		9EE1B87028DFA5BD00CD633B /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE1B86F28DFA5BD00CD633B /* UserAPI.swift */; };
+		9EE1B87328E08CC000CD633B /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE1B87228E08CC000CD633B /* DateManager.swift */; };
+		9EE1B87528E0942400CD633B /* cake.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EE1B87428E0942400CD633B /* cake.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		649B218C9DC8222CE4172A98 /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		649B2DF167812F7DEFC53264 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		649B2E9ECB3D4E7812F3A07C /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		649B2F2F401460ABE7FEC4DA /* UsersListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersListViewModel.swift; sourceTree = "<group>"; };
 		9EE1B85828DF9F4100CD633B /* CRUD_JSON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CRUD_JSON.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE1B85B28DF9F4100CD633B /* CRUD_JSONApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUD_JSONApp.swift; sourceTree = "<group>"; };
@@ -27,6 +33,8 @@
 		9EE1B86228DF9F4300CD633B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9EE1B86A28DFA07500CD633B /* UsersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListView.swift; sourceTree = "<group>"; };
 		9EE1B86F28DFA5BD00CD633B /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
+		9EE1B87228E08CC000CD633B /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
+		9EE1B87428E0942400CD633B /* cake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cake.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +67,14 @@
 		9EE1B85A28DF9F4100CD633B /* CRUD_JSON */ = {
 			isa = PBXGroup;
 			children = (
+				9EE1B87128E08CA900CD633B /* Utils */,
 				9EE1B86E28DFA57900CD633B /* Service */,
 				9EE1B86C28DFA16400CD633B /* Model */,
 				9EE1B86928DF9FFC00CD633B /* Views */,
 				9EE1B85B28DF9F4100CD633B /* CRUD_JSONApp.swift */,
 				9EE1B85D28DF9F4100CD633B /* ContentView.swift */,
 				9EE1B85F28DF9F4300CD633B /* Assets.xcassets */,
+				9EE1B87428E0942400CD633B /* cake.png */,
 				9EE1B86128DF9F4300CD633B /* Preview Content */,
 			);
 			path = CRUD_JSON;
@@ -90,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				649B2DF167812F7DEFC53264 /* User.swift */,
+				649B218C9DC8222CE4172A98 /* EndPoint.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -99,6 +110,7 @@
 			children = (
 				9EE1B86A28DFA07500CD633B /* UsersListView.swift */,
 				649B2F2F401460ABE7FEC4DA /* UsersListViewModel.swift */,
+				649B2E9ECB3D4E7812F3A07C /* UserCell.swift */,
 			);
 			path = MainUsersList;
 			sourceTree = "<group>";
@@ -109,6 +121,14 @@
 				9EE1B86F28DFA5BD00CD633B /* UserAPI.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		9EE1B87128E08CA900CD633B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9EE1B87228E08CC000CD633B /* DateManager.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +191,7 @@
 			files = (
 				9EE1B86328DF9F4300CD633B /* Preview Assets.xcassets in Resources */,
 				9EE1B86028DF9F4300CD633B /* Assets.xcassets in Resources */,
+				9EE1B87528E0942400CD633B /* cake.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +207,10 @@
 				9EE1B85C28DF9F4100CD633B /* CRUD_JSONApp.swift in Sources */,
 				649B256641C41E704CA5EAF0 /* User.swift in Sources */,
 				649B24F7C30806EEFE7B8FFB /* UsersListViewModel.swift in Sources */,
+				9EE1B87328E08CC000CD633B /* DateManager.swift in Sources */,
 				9EE1B87028DFA5BD00CD633B /* UserAPI.swift in Sources */,
+				649B2EA7F468DF6B610A8D19 /* UserCell.swift in Sources */,
+				649B27E3814182227DD02533 /* EndPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
