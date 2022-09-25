@@ -19,7 +19,7 @@ struct UserCell: View {
                             .opacity(0.1)
                         HStack {
                             
-                            Text(user.name)
+                            Text(user.name ?? "")
                                 .font(.headline)
                                 .padding()
                             Spacer()
@@ -47,7 +47,7 @@ struct UserCell: View {
 
 struct UserCell_Previews: PreviewProvider {
     static var previews: some View {
-        UserCell(user: User(id: 1, name: "camcorder", birthdate: Date()))
+        UserCell(user: User(name: "nombre", birthdate: Date(), id: 2))
     }
 }
 

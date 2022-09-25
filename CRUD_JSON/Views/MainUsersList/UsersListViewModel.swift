@@ -7,13 +7,20 @@ import Foundation
 // MARK: - viewModel of UsersList
 class UsersListViewModel: ObservableObject {
     @Published var users = [User]()
+    private var userApi : UserApi = UserApi()
 
-    init() {
-        //fetchUsers()
+    init()  {
+
     }
 
     // MARK: - functions
-    // fetch users with async/await
+    func fetchUsers() async  {
+        do {
+            users = try await userApi.fetchUsers() ?? []
+        } catch {
+            print(error)
+        }
+    }
 
 
 }

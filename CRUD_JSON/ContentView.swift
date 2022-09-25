@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    private let usersListVM : UsersListViewModel
+    init(usersListVM: UsersListViewModel) {
+        self.usersListVM = usersListVM
+    }
     var body: some View {
-        MainUsersListView(usersListVM: UsersListViewModel())
+        MainUsersListView(usersListVM: usersListVM)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+

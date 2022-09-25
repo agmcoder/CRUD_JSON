@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct CRUD_JSONApp: App {
+    private let usersListVM = UsersListViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(usersListVM: usersListVM)
+                    .task{
+                         await  usersListVM.fetchUsers()
+                    }
         }
     }
 }
