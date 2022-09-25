@@ -9,7 +9,7 @@ class UsersListViewModel: ObservableObject {
     @Published var users = [User]()
 
     init() {
-        fetchUsers()
+        //fetchUsers()
     }
 
     // MARK: - functions
