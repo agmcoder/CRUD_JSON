@@ -23,13 +23,30 @@ final class UsersApi_test: XCTestCase {
         super.tearDown()
     }
 
-    func testFetchUsers() async throws {
+    func GetTest() async throws {
         if let users = try await userApi.fetchUsers(){
             XCTAssertTrue(users.contains(where: {$0.id == 6743}))
             XCTAssertFalse(users.contains(where: {$0.id == 1}))
         }
 
     }
+
+
+    func PostTest() async throws {
+        let user = User(name: "Test", birthdate: Date(), id: 1)
+        try await userApi.createUser(user: user)
+    }
+
+
+    func DeleteTest() async throws {
+        let id = 6663
+        await userApi.deleteUser(id: id)
+        if let users = try await userApi.fetchUsers() {
+            XCTAssertFalse(users.contains(where: { $0.id == id }))
+        }
+    }
+
+
 
 
 }

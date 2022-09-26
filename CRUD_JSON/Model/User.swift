@@ -9,6 +9,6 @@ import SwiftUI
 
 struct User: Encodable, Identifiable, Decodable {
     let name: String?
-    let birthdate: Date
-    let id: Int
+    let birthdate: Date?
+    let id: Int?
 }

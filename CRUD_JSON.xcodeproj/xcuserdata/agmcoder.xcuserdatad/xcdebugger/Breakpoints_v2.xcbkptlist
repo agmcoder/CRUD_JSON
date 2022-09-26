@@ -16,8 +16,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
             endingLineNumber = "32"
-            landmarkName = "UserApi"
-            landmarkType = "3">
+            landmarkName = "fetchUsers()"
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "3EC96B36-AB29-4339-86DD-3D95112C1684 - ddfe045e8bf80286"
@@ -64,7 +64,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
             endingLineNumber = "42"
-            landmarkName = "fetchUsers()"
+            landmarkName = "createUser(user:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -142,7 +142,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
             endingLineNumber = "44"
-            landmarkName = "fetchUsers()"
+            landmarkName = "createUser(user:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -158,7 +158,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
             endingLineNumber = "43"
-            landmarkName = "fetchUsers()"
+            landmarkName = "createUser(user:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

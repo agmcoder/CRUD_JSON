@@ -26,9 +26,13 @@ struct UserCell: View {
                             Image("cake")
                                 .resizable()
                                 .frame(width: 50,height: 50)
-                            Text(dateManager(date: user.birthdate))
-                                .font(.subheadline)
-                                .padding()
+                            if (user.birthdate != nil), let date = user.birthdate {
+                                Text(dateManager(date: date))
+                                        .font(.headline)
+                                        .padding()
+                            }
+
+
                             Spacer()
                         }
                         .frame(width: .infinity)

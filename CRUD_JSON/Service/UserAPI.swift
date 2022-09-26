@@ -8,37 +8,16 @@
 import Foundation
 
 protocol UserApiProtocol {
-     func fetchUsers() async throws -> [User]?
-     func createUser(user: User) async
-     func updateUser(user: User) async
-     func deleteUser(user: User) async
+    func fetchUsers() async throws -> [User]?
+    //func createUser(user: User) async
+    //func updateUser(user: User) async
+    func deleteUser(id: Int) async
 
 }
 
 class UserApi: UserApiProtocol {
 
 
-    func createUser(user: User) async {
-        let url = URL(string: "https://jsonplaceholder.typicode.com/users")!
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpBody = try! JSONEncoder().encode(user)
-        let (data, _) = try! await URLSession.shared.data(for: request)
-        let _ = try! JSONDecoder().decode(User.self, from: data)
-    }
-        
-
-    
-    func updateUser(user: User) async  {
-        
-    }
-    
-    func deleteUser(user: User) async  {
-        
-    }
-    
-    
     func fetchUsers() async throws -> [User]? {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .customISO8601
@@ -50,19 +29,58 @@ class UserApi: UserApiProtocol {
         let urlRequest = URLRequest(url: url)
         do {
             let (json, _) = try await URLSession.shared.data(for: urlRequest)
-            
-            return try decoder.decode([User].self, from: json)
-            }
-        catch {
-                print(error)
-                    }
-        return nil
-        
-    }
-    
-    
 
+            return try decoder.decode([User].self, from: json)
+        } catch {
+            print(error)
+        }
+        return nil
+
+    }
+
+
+    func createUser(user: User) async throws {
+        guard let encoded = try? JSONEncoder().encode(user) else {
+            print("Failed to encode order")
+            return
+        }
+        guard let url = URL(string: EndPoint.users.rawValue) else {
+            print("Invalid URL")
+            return
+        }
+        var request = URLRequest(url: url)
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "POST"
+        do{
+            let (data, _) = try await URLSession.shared.upload(for: request, from: encoded)
+        }
+        catch {
+            print(error)
+        }
+    }
+
+
+    func updateUser(user: User) async {
+
+    }
+
+    func deleteUser(id: Int) async   {
+        // Delete a user with delete request
+        guard let url = URL(string: EndPoint.users.rawValue + "/\(id)") else {
+            print("Invalid URL")
+            return
+        }
+        var request = URLRequest(url: url)
+        request.httpMethod = "DELETE"
+        do{
+            let (data, _) = try await URLSession.shared.data(for: request)
+        }
+        catch {
+            print(error)
+        }
+    }
 }
+
 extension JSONDecoder.DateDecodingStrategy {
     static let customISO8601 = custom {
         let container = try $0.singleValueContainer()
