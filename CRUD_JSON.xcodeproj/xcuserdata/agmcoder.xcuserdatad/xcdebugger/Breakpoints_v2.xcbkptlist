@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "73453438-DCE0-4861-B2FC-6BA0BF97E3D8"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3EC96B36-AB29-4339-86DD-3D95112C1684"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CRUD_JSON/Service/UserAPI.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "fetchUsers()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3EC96B36-AB29-4339-86DD-3D95112C1684 - ddfe045e8bf80286"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CRUD_JSON.UserApi.fetchUsers() async throws -&gt; Swift.Optional&lt;Swift.Array&lt;CRUD_JSON.User&gt;&gt;"
+                  moduleName = "CRUD_JSON"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/agmcoder/Documents/Xcode/CRUD_JSON/CRUD_JSON/CRUD_JSON/Service/UserAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "241">
+               </Location>
+               <Location
+                  uuid = "3EC96B36-AB29-4339-86DD-3D95112C1684 - 404ab334f36675a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for CRUD_JSON.UserApi.fetchUsers() async throws -&gt; Swift.Optional&lt;Swift.Array&lt;CRUD_JSON.User&gt;&gt;"
+                  moduleName = "CRUD_JSON"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/agmcoder/Documents/Xcode/CRUD_JSON/CRUD_JSON/CRUD_JSON/Service/UserAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "97">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "57AB7E61-0450-4D8F-AE8E-6D920EEED85C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CRUD_JSON/Service/UserAPI.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "createUser(user:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "57AB7E61-0450-4D8F-AE8E-6D920EEED85C - 404ab334f36676f0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for CRUD_JSON.UserApi.fetchUsers() async throws -&gt; Swift.Optional&lt;Swift.Array&lt;CRUD_JSON.User&gt;&gt;"
+                  moduleName = "CRUD_JSON"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/agmcoder/Documents/Xcode/CRUD_JSON/CRUD_JSON/CRUD_JSON/Service/UserAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "509">
+               </Location>
+               <Location
+                  uuid = "57AB7E61-0450-4D8F-AE8E-6D920EEED85C - 75a303d72fce46a2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for CRUD_JSON.UserApi.fetchUsers() async throws -&gt; Swift.Optional&lt;Swift.Array&lt;CRUD_JSON.User&gt;&gt;"
+                  moduleName = "CRUD_JSON"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/agmcoder/Documents/Xcode/CRUD_JSON/CRUD_JSON/CRUD_JSON/Service/UserAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "57AB7E61-0450-4D8F-AE8E-6D920EEED85C - 9dd87843427ca86"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for CRUD_JSON.UserApi.fetchUsers() async throws -&gt; Swift.Optional&lt;Swift.Array&lt;CRUD_JSON.User&gt;&gt;"
+                  moduleName = "CRUD_JSON"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/agmcoder/Documents/Xcode/CRUD_JSON/CRUD_JSON/CRUD_JSON/Service/UserAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "57AB7E61-0450-4D8F-AE8E-6D920EEED85C - b2a71e2b9780f083"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for CRUD_JSON.UserApi.fetchUsers() async throws -&gt; Swift.Optional&lt;Swift.Array&lt;CRUD_JSON.User&gt;&gt;"
+                  moduleName = "CRUD_JSON"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/agmcoder/Documents/Xcode/CRUD_JSON/CRUD_JSON/CRUD_JSON/Service/UserAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D65FA3A2-D270-4574-96C7-708FCF19D936"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CRUD_JSON/Service/UserAPI.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "createUser(user:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6A9757E7-CBA1-4CE9-B6ED-E12A63E35D3B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CRUD_JSON/Service/UserAPI.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "createUser(user:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

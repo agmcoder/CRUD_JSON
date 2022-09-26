@@ -5,9 +5,10 @@
 import Foundation
 import SwiftUI
 
-// MARK: - User
-struct User: Codable, Identifiable {
-    let id: Int
-    let name: String
-    let birthdate: Date
+
+
+struct User: Encodable, Identifiable, Decodable {
+    let name: String?
+    let birthdate: Date?
+    let id: Int?
 }

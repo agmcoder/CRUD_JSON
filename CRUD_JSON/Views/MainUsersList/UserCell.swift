@@ -19,16 +19,20 @@ struct UserCell: View {
                             .opacity(0.1)
                         HStack {
                             
-                            Text(user.name)
+                            Text(user.name ?? "")
                                 .font(.headline)
                                 .padding()
                             Spacer()
                             Image("cake")
                                 .resizable()
                                 .frame(width: 50,height: 50)
-                            Text(dateManager(date: user.birthdate))
-                                .font(.subheadline)
-                                .padding()
+                            if (user.birthdate != nil), let date = user.birthdate {
+                                Text(dateManager(date: date))
+                                        .font(.headline)
+                                        .padding()
+                            }
+
+
                             Spacer()
                         }
                         .frame(width: .infinity)
@@ -47,7 +51,7 @@ struct UserCell: View {
 
 struct UserCell_Previews: PreviewProvider {
     static var previews: some View {
-        UserCell(user: User(id: 1, name: "camcorder", birthdate: Date()))
+        UserCell(user: User(name: "nombre", birthdate: Date(), id: 2))
     }
 }
 
