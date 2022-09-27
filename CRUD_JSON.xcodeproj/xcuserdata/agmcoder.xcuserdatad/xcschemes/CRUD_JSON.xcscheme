@@ -38,6 +38,28 @@
                ReferencedContainer = "container:CRUD_JSON.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9ED6589D28E2F1C60024EF48"
+               BuildableName = "CRUD_JSONTests.xctest"
+               BlueprintName = "CRUD_JSONTests"
+               ReferencedContainer = "container:CRUD_JSON.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9ED658AC28E2F9EF0024EF48"
+               BuildableName = "CRUD_JSON_UnitTests.xctest"
+               BlueprintName = "CRUD_JSON_UnitTests"
+               ReferencedContainer = "container:CRUD_JSON.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
