@@ -13,7 +13,8 @@ struct ContentView: View {
         self.usersListVM = usersListVM
     }
     var body: some View {
-        MainUsersListView(usersListVM: usersListVM)
+            MainUsersListView(usersListVM: usersListVM)
+
     }
 }
 

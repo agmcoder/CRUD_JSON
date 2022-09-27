@@ -1,13 +1,13 @@
 //
-//  CRUD_JSON_Tests.swift
-//  CRUD_JSON_Tests
+//  CRUD_JSON_UnitTests.swift
+//  CRUD_JSON_UnitTests
 //
-//  Created by agmcoder on 25/9/22.
+//  Created by agmcoder on 27/9/22.
 //
 
 import XCTest
 
-final class CRUD_JSON_Tests: XCTestCase {
+final class CRUD_JSON_UnitTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
