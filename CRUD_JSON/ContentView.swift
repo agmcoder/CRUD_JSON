@@ -13,7 +13,9 @@ struct ContentView: View {
         self.usersListVM = usersListVM
     }
     var body: some View {
-            MainUsersListView(usersListVM: usersListVM)
+        ResponsiveView { prop in
+            MainUsersListView(usersListVM: usersListVM, prop: prop)
+            }
 
     }
 }
