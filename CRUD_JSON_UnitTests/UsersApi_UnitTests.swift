@@ -50,7 +50,7 @@ final class UsersApi_UnitTests: XCTestCase {
     }
     func testUpdateUser() async throws {
         let user = User(name: "juan Antonio del carmen", birthdate: Date(), id: 6766)
-        await userApi.updateUser(user: user)
+        try await userApi.updateUser(user: user)
         if let users = try await userApi.fetchUsers(){
             XCTAssertTrue(users.contains(where: {$0.name == user.name}))
         }

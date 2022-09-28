@@ -7,12 +7,12 @@ import Foundation
 // MARK: - viewModel of UsersList
 class UsersListViewModel: ObservableObject {
     @Published var users = [User]()
-    @Published var isLoadingUsers : Bool
     private var userApi : UserApi = UserApi()
+    private var isLoadingUsers = true
 
-    init()  {
-        isLoadingUsers = true
-    }
+
+
+
 
     // MARK: - functions
     func fetchUsers() async  {
@@ -27,14 +27,15 @@ class UsersListViewModel: ObservableObject {
             }
     }
 
-
+    func callDeleteUser(index: IndexSet) async  {
+        await deleteUser(index: index)
+    }
     func deleteUser(index: IndexSet) async {
         if let id: Int = users[index.first!].id{
             await userApi.deleteUser(id: id)
             users.remove(atOffsets: index)
         }
     }
-
 
 
 }

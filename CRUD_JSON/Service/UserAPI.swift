@@ -51,20 +51,41 @@ class UserApi: UserApiProtocol {
         var request = URLRequest(url: url)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
-        do{
+        do {
             let (data, _) = try await URLSession.shared.upload(for: request, from: encoded)
-        }
-        catch {
+        } catch {
             print(error)
         }
     }
 
 
-    func updateUser(user: User) async {
+    func updateUser(user: User) async throws {
+        guard let encoded = try? JSONEncoder().encode(user) else {
+            print("Failed to encode order")
+            return
+        }
+        guard let url = URL(string: EndPoint.users.rawValue) else {
+            print("Invalid URL")
+            return
+        }
+        var request = URLRequest(url: url)
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "POST"
+
+
+        let (data, response) = try await URLSession.shared.upload(for: request, from: encoded)
+        guard (response as? HTTPURLResponse)?.statusCode != 200 else {
+            fatalError("Error while fetching data")
+        }
+
+        let successInfo = try JSONDecoder().decode(SuccessInfo.self, from: data)
+
+        print(String(data: data, encoding: .utf8) ?? "default value")
+        print("Success: (successInfo)")
 
     }
 
-    func deleteUser(id: Int) async   {
+    func deleteUser(id: Int) async {
         // Delete a user with delete request
         guard let url = URL(string: EndPoint.users.rawValue + "/\(id)") else {
             print("Invalid URL")
@@ -72,14 +93,14 @@ class UserApi: UserApiProtocol {
         }
         var request = URLRequest(url: url)
         request.httpMethod = "DELETE"
-        do{
+        do {
             let (data, _) = try await URLSession.shared.data(for: request)
-        }
-        catch {
+        } catch {
             print(error)
         }
     }
 }
+
 
 extension JSONDecoder.DateDecodingStrategy {
     static let customISO8601 = custom {
