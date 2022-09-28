@@ -8,19 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    private let usersListVM : UsersListViewModel
+    init(usersListVM: UsersListViewModel) {
+        self.usersListVM = usersListVM
+    }
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        ResponsiveView { prop in
+            MainUsersListView(usersListVM: usersListVM, prop: prop)
+            }
+
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+
